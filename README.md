@@ -6,7 +6,7 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.31+-FF4B4B.svg)](https://streamlit.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 🌟 Features
+## Features
 
 - ** AI-Powered Code Generation**: Uses Claude 3.5 Sonnet to generate Python visualization code
 - ** Multiple Data Sources**: Upload CSV, load from HuggingFace, or use example datasets
@@ -35,8 +35,7 @@ cd auto-dataviz
 pip install -r requirements.txt
 
 # Configure API key
-cp .env.example .env
-# Edit .env and add your CLAUDE_API_KEY
+# Edit .env and add your CLAUDE_API_KEY, GEMINI_API_KEY
 ```
 
 ### Run the Application
