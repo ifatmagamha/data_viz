@@ -51,7 +51,7 @@ def generate_analysis_proposals(
         # If we got a specific error like invalid key or billing, raise it clearly
         raise RuntimeError(f"Analysis failed: {str(last_error)}")
     else:
-        raise RuntimeError("No valid LLM API keys found in .env. Please check CLAUDE_API_KEY or GEMINI_API_KEY.")
+        raise RuntimeError("No valid LLM API keys found. Please check your Streamlit Secrets or .env file (CLAUDE_API_KEY or GEMINI_API_KEY).")
 
 def generate_proposals_gemini(
     dataset_context: str,

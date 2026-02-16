@@ -27,25 +27,47 @@
 ### Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/auto-dataviz.git
-cd auto-dataviz
+# Accéder au dossier du projet
+cd "data_viz"
 
-# Install dependencies
+# Installer les dépendances
 pip install -r requirements.txt
 
-# Configure API key
-cp .env.example .env
-# Edit .env and add your CLAUDE_API_KEY
+# Configuration (Option A: .env)
+cp .env.example .env # Puis éditez .env
+
+# Configuration (Option B: Streamlit Secrets - Recommandé)
+# Créez le fichier .streamlit/secrets.toml et ajoutez vos clés
 ```
 
-### Run the Application
+### Lancement Local
 
 ```bash
-streamlit run src/app.py
+# Toujours lancer depuis le dossier data_viz
+streamlit run app.py
 ```
 
-The application will open in your browser at `http://localhost:8501`
+L'application sera accessible sur `http://localhost:8501`
+
+## Deployment
+
+### Streamlit Cloud
+
+To deploy this application to Streamlit Cloud:
+
+1. Push your code to a GitHub repository.
+2. Connect your GitHub account to [Streamlit Community Cloud](https://share.streamlit.io/).
+3. Create a new app and point it to your `app.py` file.
+4. **Important**: In the app settings, go to the **Secrets** section and add your API keys:
+
+```toml
+CLAUDE_API_KEY = "your-api-key-here"
+GEMINI_API_KEY = "your-api-key-here"
+# Optional:
+OPENAI_API_KEY = "your-api-key-here"
+```
+
+The application is configured to automatically check both Streamlit Secrets and `.env` variables, prioritizing Secrets for cloud deployment.
 
 ## 📖 Usage
 
