@@ -6,18 +6,18 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.31+-FF4B4B.svg)](https://streamlit.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 🌟 Features
+## Features
 
-- **🤖 AI-Powered Code Generation**: Uses Claude 3.5 Sonnet to generate Python visualization code
-- **📊 Multiple Data Sources**: Upload CSV, load from HuggingFace, or use example datasets
-- **🧹 Automatic Data Cleaning**: Smart detection and handling of missing values, duplicates
-- **💡 Intelligent Insights**: AI-generated interpretations and recommendations
-- **🎨 Beautiful Design**: Flourish-inspired modern UI with gradient themes
-- **📥 Multiple Export Formats**: PNG and HTML exports
-- **🔍 Data Quality Reports**: Comprehensive analysis of your dataset
-- **⚡ Interactive**: Real-time visualization generation and exploration
+- ** AI-Powered Code Generation**: Uses Claude 3.5 Sonnet to generate Python visualization code
+- ** Multiple Data Sources**: Upload CSV, load from HuggingFace, or use example datasets
+- ** Automatic Data Cleaning**: Smart detection and handling of missing values, duplicates
+- ** Intelligent Insights**: AI-generated interpretations and recommendations
+- ** Beautiful Design**: Flourish-inspired modern UI with gradient themes
+- ** Multiple Export Formats**: PNG and HTML exports
+- ** Data Quality Reports**: Comprehensive analysis of your dataset
+- ** Interactive**: Real-time visualization generation and exploration
 
-## 🚀 Quick Start
+##⚡Quick Start
 
 ### Prerequisites
 
@@ -33,11 +33,9 @@ cd "data_viz"
 # Installer les dépendances
 pip install -r requirements.txt
 
-# Configuration (Option A: .env)
-cp .env.example .env # Puis éditez .env
-
-# Configuration (Option B: Streamlit Secrets - Recommandé)
-# Créez le fichier .streamlit/secrets.toml et ajoutez vos clés
+# Configure API key
+cp .env.example .env
+# Edit .env and add your CLAUDE_API_KEY
 ```
 
 ### Lancement Local
@@ -133,11 +131,11 @@ dataset = "maharshipandya/spotify-tracks-dataset"
 "What is the relationship between size and price?"
 ```
 
-## 🏗️ LLM Scaffolding: Senior analyst Engine
+## LLM Scaffolding: Senior analyst Engine
 
 This project implements advanced **LLM Scaffolding** to ensure Claude 3.5 Sonnet behaves as a reliable, professional software component rather than a generic chatbot.
 
-### 🧠 Scaffolding Principles Applied
+### Scaffolding Principles Applied
 
 1. **Persona Scaffolding (Identity)**
    - **Concept**: Defining a strict role-play boundary for the LLM.
@@ -164,7 +162,7 @@ This project implements advanced **LLM Scaffolding** to ensure Claude 3.5 Sonnet
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 src/
@@ -205,24 +203,14 @@ ENABLE_CODE_EXECUTION=true
 MAX_CODE_EXECUTION_TIME=30
 ```
 
-## 🔒 Security
+## Security
 
 - **Safe Code Execution**: Sandboxed environment with timeout limits
 - **Code Validation**: Blacklist of dangerous operations
 - **No File System Access**: Generated code cannot access files
 - **API Key Protection**: Environment variables for sensitive data
 
-## 🧪 Testing
-
-```bash
-# Run tests
-pytest
-
-# With coverage
-pytest --cov=src --cov-report=html
-```
-
-## 📊 Supported Chart Types
+## Supported Chart Types
 
 The AI can generate various visualization types:
 - **Bar Charts**: Comparisons and rankings
@@ -233,34 +221,9 @@ The AI can generate various visualization types:
 - **Heatmaps**: Multi-dimensional patterns
 - **And more**: Violin plots, area charts, pie charts, etc.
 
-## 🎯 Best Practices
+## Best Practices
 
 1. **Clear Questions**: Be specific about what you want to visualize
 2. **Clean Data**: Use the auto-clean feature for better results
 3. **Appropriate Size**: Limit datasets to <10,000 rows for optimal performance
 4. **Iterative Exploration**: Ask follow-up questions to dive deeper
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **Claude 3.5 Sonnet** by Anthropic for AI capabilities
-- **Plotly** for interactive visualizations
-- **Streamlit** for the web framework
-- **Flourish** for design inspiration
-
-## 📧 Contact
-
-For questions or feedback:
-- GitHub Issues: [Create an issue](https://github.com/yourusername/auto-dataviz/issues)
-- Email: your.email@example.com
-
----
-
-**Made with ❤️ for data storytelling**
